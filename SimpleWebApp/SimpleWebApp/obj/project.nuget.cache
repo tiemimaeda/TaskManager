@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UU1WJGZ2ZJOw6j0PgAI2lYBvBEcLd95iKxyM/t8vkIcB4BuzL8nYy59jvytxKk5Xwh17dO51pjFqaShCZuCfeQ==",
+  "dgSpecHash": "kGvNDzrprbptUdHHy5wkRz3fAA3pgEiABps1u1PAMIeN/1mOi74j1Tyfu2LjBPuKOV9Kj7wEZZcIvOvP9nrNDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pmaeda\\Documents\\Exercicios\\SimpleWebApp\\SimpleWebApp\\SimpleWebApp.csproj",
+  "projectFilePath": "C:\\Users\\pmaeda\\Documents\\Exercicios\\GestaoDeTarefas\\SimpleWebApp\\SimpleWebApp\\SimpleWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pmaeda\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\pmaeda\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

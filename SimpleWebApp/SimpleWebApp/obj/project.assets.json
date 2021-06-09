@@ -5657,11 +5657,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pmaeda\\Documents\\Exercicios\\SimpleWebApp\\SimpleWebApp\\SimpleWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\pmaeda\\Documents\\Exercicios\\GestaoDeTarefas\\SimpleWebApp\\SimpleWebApp\\SimpleWebApp.csproj",
       "projectName": "SimpleWebApp",
-      "projectPath": "C:\\Users\\pmaeda\\Documents\\Exercicios\\SimpleWebApp\\SimpleWebApp\\SimpleWebApp.csproj",
+      "projectPath": "C:\\Users\\pmaeda\\Documents\\Exercicios\\GestaoDeTarefas\\SimpleWebApp\\SimpleWebApp\\SimpleWebApp.csproj",
       "packagesPath": "C:\\Users\\pmaeda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pmaeda\\Documents\\Exercicios\\SimpleWebApp\\SimpleWebApp\\obj\\",
+      "outputPath": "C:\\Users\\pmaeda\\Documents\\Exercicios\\GestaoDeTarefas\\SimpleWebApp\\SimpleWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pmaeda\\AppData\\Roaming\\NuGet\\NuGet.Config",
