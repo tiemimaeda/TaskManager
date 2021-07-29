@@ -15,6 +15,7 @@ namespace TaskManager.Models
 
         [Column(TypeName = "DateTime")]
         [Display(Name = "Date of Request")]
+        [Required(ErrorMessage = "Required field.")]
         public DateTime RequestedDate { get; set; }
 
         [Display(Name = "User")]
