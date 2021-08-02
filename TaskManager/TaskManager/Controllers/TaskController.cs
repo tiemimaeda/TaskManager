@@ -27,21 +27,27 @@ namespace TaskManager.Controllers
         }
 
         // GET: Task/Create
-        public IActionResult Create(int id=0)
+        public IActionResult AddOrEdit(int id = 0)
         {
             ViewData["ApplicationId"] = new SelectList(_context.Applications, "Id", "Name");
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Name");
-            return View(new Models.Task());
+            if (id == 0)
+                return View(new Models.Task());
+            else
+                return View(_context.Tasks.Find(id));
         }
 
         // POST: Task/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,RequestedDate,UserId,Description,StartDate,EndDate,Complexity,ApplicationId,Status")] Models.Task task)
+        public async Task<IActionResult> AddOrEdit([Bind("Id,RequestedDate,UserId,Description,StartDate,EndDate,Complexity,ApplicationId")] Models.Task task)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(task);
+                if(task.Id == 0)
+                    _context.Add(task);
+                else
+                    _context.Update(task);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -50,24 +56,13 @@ namespace TaskManager.Controllers
             return View(task);
         }
 
-        // GET: Task/Delete/5
+        // GET: Task/Delete/
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var task = await _context.Tasks
-                .Include(t => t.Application)
-                .Include(t => t.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (task == null)
-            {
-                return NotFound();
-            }
-
-            return View(task);
+            var task = await _context.Tasks.FindAsync(id);
+            _context.Tasks.Remove(task);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
