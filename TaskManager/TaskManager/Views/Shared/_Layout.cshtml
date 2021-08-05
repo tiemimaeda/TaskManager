@@ -17,13 +17,23 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        @*<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>*@
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-wrap justify-content-between">
+                    <ul class="navbar-nav flex-grow">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Task" asp-action="Index">Tasks</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav flex-row">
+                        <li class="nav-item dropdown">
+                            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="" asp-action="">Applications</a>
+                                <a class="dropdown-item" asp-controller="" asp-action="">Users</a>
+                                @*<div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>*@
+                            </div>
                         </li>
                     </ul>
                 </div>
