@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Application>
+@{
+    ViewData["Title"] = "Applications";
+}
+
+<h2>Applications List</h2>
+<p class="text-right"> <a asp-action="Create" class="btn btn-outline-success"><i class="far fa-plus-square"></i> New Application</a></p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+</table>
