@@ -19,6 +19,11 @@ namespace TaskManager.Models
         public string Name { get; set; }
 
         [Column(TypeName = "nvarchar(250)")]
+        [Display(Name = "Department")]
+        [Required(ErrorMessage = "Required field.")]
+        public string Department { get; set; }
+
+        [Column(TypeName = "nvarchar(250)")]
         [Display(Name = "Url")]
         [Required(ErrorMessage = "Required field.")]
         public string Url { get; set; }

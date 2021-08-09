@@ -9,8 +9,8 @@ using TaskManager;
 namespace TaskManager.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210727014435_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210809005627_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,10 @@ namespace TaskManager.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("Name")
                         .IsRequired()

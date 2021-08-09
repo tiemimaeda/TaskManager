@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TaskManager.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,6 +14,7 @@ namespace TaskManager.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "nvarchar(250)", nullable: false),
+                    Department = table.Column<string>(type: "nvarchar(250)", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(250)", nullable: false),
                     Status = table.Column<bool>(nullable: false)
                 },
