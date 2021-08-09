@@ -44,7 +44,7 @@ namespace TaskManager.Controllers
         }
 
         // GET: Application/Create
-        public IActionResult Create()
+        public IActionResult AddOrEdit()
         {
             return View();
         }
@@ -54,7 +54,7 @@ namespace TaskManager.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Url,Status")] Application application)
+        public async Task<IActionResult> AddOrEdit([Bind("Id,Name,Url,Status")] Application application)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace TaskManager.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Url,Status")] Application application)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Department,Url,Status")] Application application)
         {
             if (id != application.Id)
             {

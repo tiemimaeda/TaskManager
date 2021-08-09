@@ -14,7 +14,7 @@ namespace TaskManager.Models
         public int Id { get; set; }
 
         [Column(TypeName = "nvarchar(250)")]
-        [Display(Name = "Application")]
+        [Display(Name = "Application Name")]
         [Required(ErrorMessage = "Required field.")]
         public string Name { get; set; }
 
