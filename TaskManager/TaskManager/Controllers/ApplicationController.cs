@@ -45,7 +45,7 @@ namespace TaskManager.Controllers
                 if (application.Id == 0)
                     _context.Add(application);
                 else
-                    _context.Add(application);
+                    _context.Update(application);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
             }
