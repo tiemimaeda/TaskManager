@@ -3,20 +3,22 @@
 <h2> Description </h2>
 
 <p>This is a task management application where you will be able to:</p>
-- [x] Create tasks
-- [x] Edit tasks
-- [x] Delete tasks
 
-<h2 > 🚧  Under construction...  🚧 </h2>
-- [ ] Insert applications
-- [ ] Edit applications
-- [ ] Delete applications
-- [ ] Insert users
-- [ ] Edit users
-- [ ] Delete users
+* Create tasks
+* Edit tasks
+* Delete tasks
+* Insert applications
+* Edit applications
+* Delete applications
+
+<h2 align="center"> 🚧  Under construction...  🚧 </h2>
+
+* Insert users
+* Edit users
+* Delete users
 
 
-<h2> Running the application </h2>
+<h2 align="center"> Running the application </h2>
 
 ```bash
 # Clone this repository
