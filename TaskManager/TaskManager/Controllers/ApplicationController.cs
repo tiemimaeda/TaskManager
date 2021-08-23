@@ -52,7 +52,7 @@ namespace TaskManager.Controllers
             return View(application);
         }
 
-        // GET: Application/Delete/
+        // GET: Application/Delete/Id
         public async Task<IActionResult> Delete(int? id)
         {
             var application = await _context.Applications.FindAsync(id);

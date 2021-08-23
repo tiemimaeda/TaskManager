@@ -27,9 +27,12 @@ namespace TaskManager.Controllers
         }
 
         // GET: User/Create
-        public IActionResult AddOrEdit()
+        public IActionResult AddOrEdit(int id = 0)
         {
-            return View();
+            if (id == 0)
+                return View(new User());
+            else
+                return View(_context.Users.Find(id));
         }
 
         // POST: User/Create
@@ -39,29 +42,23 @@ namespace TaskManager.Controllers
         {
             if (ModelState.IsValid)
             {
+               if(user.Id == 0)
                 _context.Add(user);
+               else
+                _context.Update(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(user);
         }
 
-        // GET: User/Delete/5
+        // GET: User/Delete/Id
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return View(user);
+            var user = await _context.Users.FindAsync(id);
+            _context.Remove(user);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }
