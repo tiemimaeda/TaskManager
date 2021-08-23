@@ -4,18 +4,16 @@
 
 <p>This is a task management application where you will be able to:</p>
 
-* Create tasks
-* Edit tasks
-* Delete tasks
-* Insert applications
-* Edit applications
-* Delete applications
+* Create, Edit and Delete Applications
+* Create, Edit and Delete Users
+* Create, Edit and Delete Tasks
+
 
 <h2 align="center"> 🚧  Under construction...  🚧 </h2>
 
-* Insert users
-* Edit users
-* Delete users
+* Improve status field
+* Implement order by date or status
+* Graph to show number of tasks
 
 
 <h2 align="center"> Running the application </h2>
