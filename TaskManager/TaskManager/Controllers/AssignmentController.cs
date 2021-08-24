@@ -40,7 +40,7 @@ namespace TaskManager.Controllers
         // POST: Assignment/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddOrEdit([Bind("Id,RequestedDate,UserId,Description,StartDate,EndDate,Complexity,ApplicationId")] Assignment assignment)
+        public async Task<IActionResult> AddOrEdit(Assignment assignment)
         {
             if (ModelState.IsValid)
             {

@@ -38,7 +38,7 @@ namespace TaskManager.Controllers
         // POST: User/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddOrEdit([Bind("Id,Name,Email,Password,Status")] User user)
+        public async Task<IActionResult> AddOrEdit(User user)
         {
             if (ModelState.IsValid)
             {
