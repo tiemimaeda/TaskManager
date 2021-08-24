@@ -32,7 +32,7 @@ namespace TaskManager.Controllers
             ViewData["ApplicationId"] = new SelectList(_context.Applications, "Id", "Name");
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Name");
             if (id == 0)
-                return View(new Assignment());
+                return View(new Assignment() {RequestedDate = DateTime.Now});
             else
                 return View(_context.Assignments.Find(id));
         }
