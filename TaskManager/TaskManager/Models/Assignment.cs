@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace TaskManager.Models
 {
-    [Table("TASK")]
-    public class Task
+    [Table("ASSIGNMENT")]
+    public class Assignment
     {
         [Key]
         public int Id { get; set; }

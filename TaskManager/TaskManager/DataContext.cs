@@ -14,7 +14,7 @@ namespace TaskManager
         }
 
         public DbSet<Application> Applications { get; set; }
-        public DbSet<Models.Task> Tasks { get; set; }
+        public DbSet<Assignment> Assignments { get; set; }
         public DbSet<User> Users { get; set; }
 
     }
