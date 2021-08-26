@@ -16,6 +16,7 @@ namespace TaskManager.Models
         [Column(TypeName = "DateTime")]
         [Display(Name = "Date of Request")]
         [Required(ErrorMessage = "Required field.")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime RequestedDate { get; set; }
 
         [Display(Name = "User")]
@@ -29,9 +30,11 @@ namespace TaskManager.Models
         public string Description { get; set; }
 
         [Display(Name = "Start Date")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime? StartDate { get; set; }
 
         [Display(Name = "End Date")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime? EndDate { get; set; }
 
         [Display(Name = "Complexity")]

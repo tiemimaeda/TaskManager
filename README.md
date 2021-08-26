@@ -14,6 +14,7 @@
 * Improve status field
 * Implement order by date or status
 * Graph to show number of tasks
+* Create a login page
 
 
 <h2 align="center"> Running the application </h2>

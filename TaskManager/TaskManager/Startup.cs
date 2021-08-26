@@ -27,7 +27,8 @@ namespace TaskManager
             services.AddDbContext<DataContext>(
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
             );
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +50,8 @@ namespace TaskManager
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseBrowserLink();
 
             app.UseEndpoints(endpoints =>
             {
