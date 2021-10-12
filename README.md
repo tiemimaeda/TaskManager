@@ -21,7 +21,7 @@
 
 ```bash
 # Clone this repository
-$ git clone <https://github.com/tiemimaeda/TaskManager.git>
+$ git clone https://github.com/tiemimaeda/TaskManager.git
 ```
 
 ```bash
